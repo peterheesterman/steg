@@ -5,7 +5,7 @@ A steganography tool.
 
 ### Terms
   - `payload` - the secret message or content to be hidden
-  - `carrier` - the things which you are trying to hide the message in
+  - `carrier` - the entity in which you are trying to hide a `payload`
   - `package` - the result of hiding the `payload` in the `carrier`
   - `encoding density` - the normalised proportion of the package that the paylaod has affected
   - `channel` - describes the type of carrier in which the `payload` will be hidden
