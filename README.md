@@ -36,6 +36,9 @@ The below is a plan of the supported `payload` and `carrier` types and default `
 
 
 ### Text default stratagies
+  - x is done
+  - :hammer: is being made
+  - empty means not supported yet - make a PR!
 
 | Supported     | Payload       | Carrier       | Default stratagy   |
 | ------------- | ------------- | ------------- | ------------------ | 
@@ -51,7 +54,7 @@ The below is a plan of the supported `payload` and `carrier` types and default `
 
 | Supported     | Payload       | Carrier       | Default stratagy   |
 | ------------- | ------------- | ------------- | ------------------ | 
-| [ ]           | png           | image/png     |                    |
+| [:hammer:]    | png           | image/png     |                    |
 | [ ]           | png           | image/jpeg    |                    |
 | [ ]           | png           | image/bmp     |                    |
 | [ ]           | png           | video/avi     |                    |

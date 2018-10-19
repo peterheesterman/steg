@@ -2,6 +2,9 @@
 extern crate clap;
 use clap::{App, Arg};
 
+extern crate steg;
+use steg::Config;
+
 fn main() {
     let matches = App::new("Steg")
         .version("0.1.0")
@@ -24,9 +27,9 @@ fn main() {
             .required(true)
             .takes_value(true))
 
-        .arg(Arg::with_name("stratagy")
+        .arg(Arg::with_name("strategy")
             .short("s")
-            .long("stratagy")
+            .long("strategy")
             .value_name("FILE")
             .help("The specific way in which you want to hide the payload in the carrier")
             .takes_value(true))
@@ -34,17 +37,29 @@ fn main() {
         .get_matches();
 
 
-        // Print out the values of the inputs
-        if let Some(carrier_path) = matches.value_of("carrier") {
-            println!("Value for stratagy: {}", &carrier_path);
-        }
+    // Print out the values of the inputs
+    let carrier_path = match matches.value_of("carrier") {
+        Some(path) => path,
+        None => panic!("There is no carrier supplied"),
+    };
 
-        if let Some(payload_path) = matches.value_of("payload") {
-            println!("Value for payload: {}", &payload_path);
-        }
+    let payload_path = match matches.value_of("payload") {
+        Some(path) => path,
+        None => panic!("There is no payload supplied"),
+    };
 
-        if let Some(strategy_path) = matches.value_of("stratagy") {
-            println!("Value for stratagy: {}", &strategy_path);
-        }
+    let strategy_path = match matches.value_of("strategy") {
+        Some(path) => path,
+        None => panic!("There is no strategy supplied"),
+    };
+
+    let config = Config {
+        carrier_path,
+        payload_path,
+        strategy_path
+    };
+
+    println!("Configuration: {:?}", config);
+
+    steg::run(config)
 }
-
