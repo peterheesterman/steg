@@ -1,7 +1,8 @@
 
 # Steg
 
-A steganography tool.
+Command line steganography tool.
+
 
 ### Terms
   - `payload` - the secret message or content to be hidden
@@ -22,12 +23,18 @@ steg -p ./payload -c ./carrier -s ./strategy.str
 The below is a plan of the supported `payload` and `carrier` types and default `strategies` for use with each.
 
 
+### Key
+  - x is done
+  - :hammer: is being made
+  - empty means not supported yet - make a PR!
+
+
 ### Supported formats
 
  - [ ] text
     - [ ] utf8
  - [ ] images
-    - [ ] png
+    - [:hammer:] png
     - [ ] jpeg
     - [ ] bmp
  - [ ] videos
@@ -36,9 +43,6 @@ The below is a plan of the supported `payload` and `carrier` types and default `
 
 
 ### Text default stratagies
-  - x is done
-  - :hammer: is being made
-  - empty means not supported yet - make a PR!
 
 | Supported     | Payload       | Carrier       | Default stratagy   |
 | ------------- | ------------- | ------------- | ------------------ | 
@@ -52,23 +56,23 @@ The below is a plan of the supported `payload` and `carrier` types and default `
 
 ### Image default stratagies
 
-| Supported     | Payload       | Carrier       | Default stratagy   |
-| ------------- | ------------- | ------------- | ------------------ | 
-| [:hammer:]    | png           | image/png     |                    |
-| [ ]           | png           | image/jpeg    |                    |
-| [ ]           | png           | image/bmp     |                    |
-| [ ]           | png           | video/avi     |                    |
-| [ ]           | png           | video/mp4     |                    |
-| [ ]           | jpeg          | image/png     |                    |
-| [ ]           | jpeg          | image/jpeg    |                    |
-| [ ]           | jpeg          | image/bmp     |                    |
-| [ ]           | jpeg          | video/avi     |                    |
-| [ ]           | jpeg          | video/mp4     |                    |
-| [ ]           | bmp           | image/png     |                    |
-| [ ]           | bmp           | image/jpeg    |                    |
-| [ ]           | bmp           | image/bmp     |                    |
-| [ ]           | bmp           | video/avi     |                    |
-| [ ]           | bmp           | video/mp4     |                    |
+| Supported     | Payload       | Carrier       | Default stratagy      |
+| ------------- | ------------- | ------------- | --------------------- | 
+| [x]           | png           | image/png     | lsb_png_steganography |
+| [ ]           | png           | image/jpeg    |                       |
+| [ ]           | png           | image/bmp     |                       |
+| [ ]           | png           | video/avi     |                       |
+| [ ]           | png           | video/mp4     |                       |
+| [ ]           | jpeg          | image/png     |                       |
+| [ ]           | jpeg          | image/jpeg    |                       |
+| [ ]           | jpeg          | image/bmp     |                       |
+| [ ]           | jpeg          | video/avi     |                       |
+| [ ]           | jpeg          | video/mp4     |                       |
+| [ ]           | bmp           | image/png     |                       |
+| [ ]           | bmp           | image/jpeg    |                       |
+| [ ]           | bmp           | image/bmp     |                       |
+| [ ]           | bmp           | video/avi     |                       |
+| [ ]           | bmp           | video/mp4     |                       |
 
 
 ### Video default stratagies
@@ -79,4 +83,3 @@ The below is a plan of the supported `payload` and `carrier` types and default `
 | [ ]           | avi           | image/mp4     |                    |
 | [ ]           | mp4           | image/avi     |                    |
 | [ ]           | mp4           | image/mp4     |                    |
-

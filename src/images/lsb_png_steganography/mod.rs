@@ -1,18 +1,12 @@
 
-//extern crate lsb_png_steganography;
+extern crate lsb_png_steganography;
 
-/* 
-    Plan:
-        - write a crate for this
-        - use that crate
-*/
+pub fn hide(payload_path: &str, carrier_path: &str, output_path: &str) {
+    let img = lsb_png_steganography::hide(payload_path, carrier_path);
+    img.save(output_path).unwrap();
+}
 
-/*
-    Need to handle pngs with:
-        - 24 bit RGB pixels
-        - 32 bit RGBA pixels
-*/
-
-pub fn run() {
-    println!("lsb_png_steganography is running")
+pub fn reveal(carrier_path: &str, output_path: &str) {
+    let img = lsb_png_steganography::reveal(carrier_path);
+    img.save(output_path).unwrap();
 }
