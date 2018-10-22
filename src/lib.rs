@@ -1,37 +1,69 @@
 
 #[derive(Debug)] 
-pub struct Config<'a> {
-    pub strategy_path: &'a str,
+pub struct HideConfig<'a> {
     pub payload_path: &'a str,
     pub carrier_path: &'a str,
+    pub output_path: Option<&'a str>,
+    pub strategy: Option<&'a str>,
+}
+
+#[derive(Debug)] 
+pub struct RevealConfig<'a> {
+    pub carrier_path: &'a str,
+    pub output_path: Option<&'a str>,
+    pub strategy: Option<&'a str>,
 }
 
 mod text;
 mod images;
 mod videos;
 
-pub fn run (config: Config) {
-    // cargo run -- -p dfkjl.png -c dsjfkl.png -s kdsjf
+pub fn run_hide (config: HideConfig) {
     if config.payload_path.ends_with(".png") && config.carrier_path.ends_with(".png") {
-        println!("We are going to default to lsb_png_steganography");
-        images::lsb_png_steganography::run();
-    } else {
-        panic!("Nothing happened!")
+        println!("Hide using - Least Significant Bit PNG Steganography (lsb_png_steganography)");
+
+        if let Some(output_path) = config.output_path {
+            images::lsb_png_steganography::hide(config.payload_path, config.carrier_path, output_path);
+        } else {
+            images::lsb_png_steganography::hide(config.payload_path, config.carrier_path, "./steg_hide_output.png");
+        }
+    }
+}
+
+pub fn run_reveal (config: RevealConfig) {
+    if config.carrier_path.ends_with(".png") {
+        if let Some(output_path) = config.output_path {
+            images::lsb_png_steganography::reveal(config.carrier_path, output_path);
+        } else {
+            images::lsb_png_steganography::reveal(config.carrier_path, "./steg_reveal_output.png");
+        }
     }
 }
 
 #[cfg(test)]
 mod tests {
-    use super::Config;
+    use super::{ HideConfig, RevealConfig };
 
     #[test]
-    fn lsb_png_steganography_does_not_panic() {
-        let config = Config {
-            strategy_path: "",
-            payload_path: ".png",
-            carrier_path: ".png",
+    fn lsb_png_steganography_hide_does_not_panic() {
+        let config = HideConfig {
+            strategy: Some(""),
+            output_path: Some("images/output/lsb_png_steganography_hide_does_not_panic.png"),
+            payload_path: "./images/payload.png",
+            carrier_path: "./images/carrier.png",
         };
 
-        super::run(config);
+        super::run_hide(config);
+    }
+
+     #[test]
+    fn lsb_png_steganography_reveal_does_not_panic() {
+        let config = RevealConfig {
+            strategy: Some(""),
+            output_path: Some("images/output/lsb_png_steganography_reveal_does_not_panic.png"),
+            carrier_path: "./images/hidden.png",
+        };
+
+        super::run_reveal(config);
     }
 }
