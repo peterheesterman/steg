@@ -17,14 +17,21 @@ Command line steganography tool.
 ### Usage
 
 ```
-steg -p ./payload -c ./carrier -s ./strategy.str
+cargo install steg
+
+// Hide something
+steg hide -p ./payload.png -c ./carrier.png -o ./output.png
+
+// Reveal something that was hidden
+steg reveal -c ./output.png
+
 ```
 
 The below is a plan of the supported `payload` and `carrier` types and default `strategies` for use with each.
 
 
 ### Key
-  - x is done
+  - :heavy_check_mark: is done
   - :hammer: is being made
   - empty means not supported yet - make a PR!
 
@@ -56,23 +63,23 @@ The below is a plan of the supported `payload` and `carrier` types and default `
 
 ### Image default stratagies
 
-| Supported     | Payload       | Carrier       | Default stratagy      |
-| ------------- | ------------- | ------------- | --------------------- | 
-| [x]           | png           | image/png     | lsb_png_steganography |
-| [ ]           | png           | image/jpeg    |                       |
-| [ ]           | png           | image/bmp     |                       |
-| [ ]           | png           | video/avi     |                       |
-| [ ]           | png           | video/mp4     |                       |
-| [ ]           | jpeg          | image/png     |                       |
-| [ ]           | jpeg          | image/jpeg    |                       |
-| [ ]           | jpeg          | image/bmp     |                       |
-| [ ]           | jpeg          | video/avi     |                       |
-| [ ]           | jpeg          | video/mp4     |                       |
-| [ ]           | bmp           | image/png     |                       |
-| [ ]           | bmp           | image/jpeg    |                       |
-| [ ]           | bmp           | image/bmp     |                       |
-| [ ]           | bmp           | video/avi     |                       |
-| [ ]           | bmp           | video/mp4     |                       |
+| Supported          | Payload       | Carrier       | Default stratagy      |
+| ------------------ | ------------- | ------------- | --------------------- | 
+| :heavy_check_mark: | png           | image/png     | lsb_png_steganography |
+| [ ]                | png           | image/jpeg    |                       |
+| [ ]                | png           | image/bmp     |                       |
+| [ ]                | png           | video/avi     |                       |
+| [ ]                | png           | video/mp4     |                       |
+| [ ]                | jpeg          | image/png     |                       |
+| [ ]                | jpeg          | image/jpeg    |                       |
+| [ ]                | jpeg          | image/bmp     |                       |
+| [ ]                | jpeg          | video/avi     |                       |
+| [ ]                | jpeg          | video/mp4     |                       |
+| [ ]                | bmp           | image/png     |                       |
+| [ ]                | bmp           | image/jpeg    |                       |
+| [ ]                | bmp           | image/bmp     |                       |
+| [ ]                | bmp           | video/avi     |                       |
+| [ ]                | bmp           | video/mp4     |                       |
 
 
 ### Video default stratagies
