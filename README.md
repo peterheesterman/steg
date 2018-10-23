@@ -41,7 +41,7 @@ The below is a plan of the supported `payload` and `carrier` types and default `
  - [ ] text
     - [ ] utf8
  - [ ] images
-    - [:hammer:] png
+    - :hammer: png
     - [ ] jpeg
     - [ ] bmp
  - [ ] videos
@@ -53,12 +53,12 @@ The below is a plan of the supported `payload` and `carrier` types and default `
 
 | Supported     | Payload       | Carrier       | Default stratagy   |
 | ------------- | ------------- | ------------- | ------------------ | 
-| [ ]           | utf8          | utf8          | zero-width-spaces  |
-| [ ]           | utf8          | image/png     |                    |
-| [ ]           | utf8          | image/jpeg    |                    |
-| [ ]           | utf8          | image/bmp     |                    |
-| [ ]           | utf8          | video/avi     |                    |
-| [ ]           | utf8          | video/mp4     |                    |
+|               | utf8          | utf8          | zero-width-spaces  |
+|               | utf8          | image/png     |                    |
+|               | utf8          | image/jpeg    |                    |
+|               | utf8          | image/bmp     |                    |
+|               | utf8          | video/avi     |                    |
+|               | utf8          | video/mp4     |                    |
 
 
 ### Image default stratagies
@@ -66,27 +66,27 @@ The below is a plan of the supported `payload` and `carrier` types and default `
 | Supported          | Payload       | Carrier       | Default stratagy      |
 | ------------------ | ------------- | ------------- | --------------------- | 
 | :heavy_check_mark: | png           | image/png     | lsb_png_steganography |
-| [ ]                | png           | image/jpeg    |                       |
-| [ ]                | png           | image/bmp     |                       |
-| [ ]                | png           | video/avi     |                       |
-| [ ]                | png           | video/mp4     |                       |
-| [ ]                | jpeg          | image/png     |                       |
-| [ ]                | jpeg          | image/jpeg    |                       |
-| [ ]                | jpeg          | image/bmp     |                       |
-| [ ]                | jpeg          | video/avi     |                       |
-| [ ]                | jpeg          | video/mp4     |                       |
-| [ ]                | bmp           | image/png     |                       |
-| [ ]                | bmp           | image/jpeg    |                       |
-| [ ]                | bmp           | image/bmp     |                       |
-| [ ]                | bmp           | video/avi     |                       |
-| [ ]                | bmp           | video/mp4     |                       |
+|                    | png           | image/jpeg    |                       |
+|                    | png           | image/bmp     |                       |
+|                    | png           | video/avi     |                       |
+|                    | png           | video/mp4     |                       |
+|                    | jpeg          | image/png     |                       |
+|                    | jpeg          | image/jpeg    |                       |
+|                    | jpeg          | image/bmp     |                       |
+|                    | jpeg          | video/avi     |                       |
+|                    | jpeg          | video/mp4     |                       |
+|                    | bmp           | image/png     |                       |
+|                    | bmp           | image/jpeg    |                       |
+|                    | bmp           | image/bmp     |                       |
+|                    | bmp           | video/avi     |                       |
+|                    | bmp           | video/mp4     |                       |
 
 
 ### Video default stratagies
 
 | Supported     | Payload       | Carrier       | Default stratagy   |
 | ------------- | ------------- | ------------- | ------------------ |
-| [ ]           | avi           | image/avi     |                    |
-| [ ]           | avi           | image/mp4     |                    |
-| [ ]           | mp4           | image/avi     |                    |
-| [ ]           | mp4           | image/mp4     |                    |
+|               | avi           | image/avi     |                    |
+|               | avi           | image/mp4     |                    |
+|               | mp4           | image/avi     |                    |
+|               | mp4           | image/mp4     |                    |

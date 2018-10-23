@@ -60,7 +60,7 @@ fn main() {
                     .short("o")
                     .long("output")
                     .value_name("FILE")
-                    .help("The specific way in which you want to hide the payload in the carrier")
+                    .help("Where to put the result of exposing the payload within the carrier")
                     .takes_value(true))
 
                 .arg(Arg::with_name("strategy")
