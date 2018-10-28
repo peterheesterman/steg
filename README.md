@@ -51,14 +51,14 @@ The below is a plan of the supported `payload` and `carrier` types and default `
 
 ### Text default stratagies
 
-| Supported     | Payload       | Carrier       | Default stratagy               |
-| ------------- | ------------- | ------------- | ------------------------------ |
-| :hammer:      | utf8          | utf8          | [whitespace_text_steganography](https://crates.io/crates/whitespace_text_steganography) |
-| :hammer:      | utf8          | image/png     | [lsb_text_png_steganography](https://crates.io/crates/lsb_text_png_steganography) |
-|               | utf8          | image/jpeg    |                                |
-|               | utf8          | image/bmp     |                                |
-|               | utf8          | video/avi     |                                |
-|               | utf8          | video/mp4     |                                |
+| Supported          | Payload       | Carrier       | Default stratagy               |
+| ------------------ | ------------- | ------------- | ------------------------------ |
+| :heavy_check_mark: | utf8          | utf8          | [whitespace_text_steganography](https://crates.io/crates/whitespace_text_steganography) |
+| :hammer:           | utf8          | image/png     | [lsb_text_png_steganography](https://crates.io/crates/lsb_text_png_steganography) |
+|                    | utf8          | image/jpeg    |                                |
+|                    | utf8          | image/bmp     |                                |
+|                    | utf8          | video/avi     |                                |
+|                    | utf8          | video/mp4     |                                |
 
 
 ### Image default stratagies
