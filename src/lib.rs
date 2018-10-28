@@ -28,12 +28,12 @@ pub fn run_hide (config: HideConfig) {
             images::lsb_png_steganography::hide(config.payload_path, config.carrier_path, "./steg_hide_output.png");
         }
     } else if config.payload_path.ends_with(".txt") && config.carrier_path.ends_with(".txt") {
-            println!("Hide using - whitespace text steganography");
+        println!("Hide using - whitespace text steganography");
 
         if let Some(output_path) = config.output_path {
             text::whitespace_text_steganography::hide(config.payload_path, config.carrier_path, output_path);
         } else {
-            text::whitespace_text_steganography::hide(config.payload_path, config.carrier_path, "./steg_hide_output.png");
+            text::whitespace_text_steganography::hide(config.payload_path, config.carrier_path, "./steg_hide_output.txt");
         }
     }
 }
@@ -61,10 +61,10 @@ mod tests {
     #[test]
     fn lsb_png_steganography_hide_does_not_panic() {
         let config = HideConfig {
-            strategy: Some(""),
-            output_path: Some("images/output/lsb_png_steganography_hide_does_not_panic.png"),
+            strategy: None,
             payload_path: "./images/payload.png",
             carrier_path: "./images/carrier.png",
+            output_path: Some("images/output/lsb_png_steganography_hide_does_not_panic.png"),
         };
 
         super::run_hide(config);
@@ -73,9 +73,9 @@ mod tests {
      #[test]
     fn lsb_png_steganography_reveal_does_not_panic() {
         let config = RevealConfig {
-            strategy: Some(""),
-            output_path: Some("./images/output/whitespace_text_steganography_reveal_does_not_panic.png"),
+            strategy: None,
             carrier_path: "./images/hidden.png",
+            output_path: Some("./images/output/whitespace_text_steganography_reveal_does_not_panic.png"),
         };
 
         super::run_reveal(config);
@@ -84,10 +84,10 @@ mod tests {
     #[test]
     fn whitespace_text_steganography_hide_does_not_panic() {
         let config = HideConfig {
-            strategy: Some(""),
-            output_path: Some("./text/output/whitespace_text_steganography_hide_does_not_panic.txt"),
-            payload_path: "./text/payload.txt",
-            carrier_path: "./text/carrier.txt",
+            strategy: None,
+            payload_path: "./texts/payload_haiku.txt",
+            carrier_path: "./texts/carrier_sonnet.txt",
+            output_path: Some("./texts/output/whitespace_text_steganography_hide_does_not_panic.txt"),
         };
 
         super::run_hide(config);
@@ -96,9 +96,9 @@ mod tests {
     #[test]
     fn whitespace_text_steganography_reveal_does_not_panic() {
         let config = RevealConfig {
-            strategy: Some(""),
-            output_path: Some("./text/output/whitespace_text_steganography_hide_does_not_panic.txt"),
-            carrier_path: "./text/carrier.txt", 
+            strategy: None,
+            carrier_path: "./texts/hidden.txt", 
+            output_path: Some("./texts/output/whitespace_text_steganography_reveal_does_not_panic.txt"),
         };
 
         super::run_reveal(config);

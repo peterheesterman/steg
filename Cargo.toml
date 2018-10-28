@@ -14,4 +14,4 @@ license = "MIT"
 [dependencies]
 clap = '2.32'
 lsb_png_steganography = '0.1.0'
-whitespace_text_steganography = '0.1.0'
+whitespace_text_steganography = '0.2.0'
