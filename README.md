@@ -17,7 +17,7 @@ Command line steganography tool.
 ### Usage
 
 ```
-cargo install steg
+cargo install steg (you must have [cargo](https://crates.io/install) installed)
 
 // Hide something
 steg hide -p ./payload.png -c ./carrier.png -o ./output.png
@@ -51,21 +51,21 @@ The below is a plan of the supported `payload` and `carrier` types and default `
 
 ### Text default stratagies
 
-| Supported         | Payload       | Carrier       | Default stratagy   |
-| ----------------- | ------------- | ------------- | ------------------ | 
-|:heavy_check_mark: | utf8          | utf8          | zero-width-spaces  |
-|                   | utf8          | image/png     |                    |
-|                   | utf8          | image/jpeg    |                    |
-|                   | utf8          | image/bmp     |                    |
-|                   | utf8          | video/avi     |                    |
-|                   | utf8          | video/mp4     |                    |
+| Supported     | Payload       | Carrier       | Default stratagy               |
+| ------------- | ------------- | ------------- | ------------------------------ |
+| :hammer:      | utf8          | utf8          | [whitespace_text_steganography](https://crates.io/crates/whitespace_text_steganography) |
+| :hammer:      | utf8          | image/png     | [lsb_text_png_steganography](https://crates.io/crates/lsb_text_png_steganography) |
+|               | utf8          | image/jpeg    |                                |
+|               | utf8          | image/bmp     |                                |
+|               | utf8          | video/avi     |                                |
+|               | utf8          | video/mp4     |                                |
 
 
 ### Image default stratagies
 
 | Supported          | Payload       | Carrier       | Default stratagy      |
 | ------------------ | ------------- | ------------- | --------------------- | 
-| :heavy_check_mark: | png           | image/png     | lsb_png_steganography |
+| :heavy_check_mark: | png           | image/png     | [lsb_png_steganography](https://crates.io/crates/lsb_png_steganography) |
 |                    | png           | image/jpeg    |                       |
 |                    | png           | image/bmp     |                       |
 |                    | png           | video/avi     |                       |
