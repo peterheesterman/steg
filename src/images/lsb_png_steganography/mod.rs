@@ -1,4 +1,3 @@
-
 extern crate lsb_png_steganography;
 
 pub fn hide(payload_path: &str, carrier_path: &str, output_path: &str) {
