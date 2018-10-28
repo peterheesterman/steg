@@ -38,7 +38,7 @@ The below is a plan of the supported `payload` and `carrier` types and default `
 
 ### Supported formats
 
- - [ ] text
+ - :hammer: text
     - [ ] utf8
  - [ ] images
     - :hammer: png
@@ -51,14 +51,14 @@ The below is a plan of the supported `payload` and `carrier` types and default `
 
 ### Text default stratagies
 
-| Supported     | Payload       | Carrier       | Default stratagy   |
-| ------------- | ------------- | ------------- | ------------------ | 
-|               | utf8          | utf8          | zero-width-spaces  |
-|               | utf8          | image/png     |                    |
-|               | utf8          | image/jpeg    |                    |
-|               | utf8          | image/bmp     |                    |
-|               | utf8          | video/avi     |                    |
-|               | utf8          | video/mp4     |                    |
+| Supported         | Payload       | Carrier       | Default stratagy   |
+| ----------------- | ------------- | ------------- | ------------------ | 
+|:heavy_check_mark: | utf8          | utf8          | zero-width-spaces  |
+|                   | utf8          | image/png     |                    |
+|                   | utf8          | image/jpeg    |                    |
+|                   | utf8          | image/bmp     |                    |
+|                   | utf8          | video/avi     |                    |
+|                   | utf8          | video/mp4     |                    |
 
 
 ### Image default stratagies
