@@ -38,7 +38,7 @@ The below is a plan of the supported `payload` and `carrier` types and default `
 
 ### Supported formats
 
- - [ ] text
+ - :hammer: text
     - [ ] utf8
  - [ ] images
     - :hammer: png
