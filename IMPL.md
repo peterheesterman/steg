@@ -11,11 +11,11 @@ Planning to use `clap` (command line argument parser) for this
 
 - steg 
   - images
-    - all the image algorithms
+    - all the ways of hiding images
   - text
-    - all the text algorithms
+    - all the ways of hiding text
   - video
-    - all the video algorithms
+    - all the ways of hiding video
 
 All implementations of algorithms (strategies) should live in different repos. 
 
@@ -23,3 +23,12 @@ Each strategy should have a `hide` and a `reveal` function with `detech` and `an
 
 It should be easy to switch out and use other peoples code to add strategies to `steg` in the future. This may mean wrapping their code in another module or using is directly. It will have to been seen which ends up being easier.
 
+
+### Should i be writing adapters not stand alone things
+Reduce for a format:
+  - Payload -> byte array
+  - byte array -> payload
+
+Construct from a package:
+  - byte array -> package with carrier type
+  - package with carrier type -> byte array
