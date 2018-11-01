@@ -181,6 +181,14 @@ dependencies = [
 ]
 
 [[package]]
+name = "lsb_text_png_steganography"
+version = "0.1.1"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+dependencies = [
+ "image 0.20.0 (registry+https://github.com/rust-lang/crates.io-index)",
+]
+
+[[package]]
 name = "lzw"
 version = "0.10.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -352,6 +360,7 @@ version = "0.1.4"
 dependencies = [
  "clap 2.32.0 (registry+https://github.com/rust-lang/crates.io-index)",
  "lsb_png_steganography 0.1.0 (registry+https://github.com/rust-lang/crates.io-index)",
+ "lsb_text_png_steganography 0.1.1 (registry+https://github.com/rust-lang/crates.io-index)",
  "whitespace_text_steganography 0.2.1 (registry+https://github.com/rust-lang/crates.io-index)",
 ]
 
@@ -487,6 +496,7 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 "checksum lazy_static 1.1.0 (registry+https://github.com/rust-lang/crates.io-index)" = "ca488b89a5657b0a2ecd45b95609b3e848cf1755da332a0da46e2b2b1cb371a7"
 "checksum libc 0.2.43 (registry+https://github.com/rust-lang/crates.io-index)" = "76e3a3ef172f1a0b9a9ff0dd1491ae5e6c948b94479a3021819ba7d860c8645d"
 "checksum lsb_png_steganography 0.1.0 (registry+https://github.com/rust-lang/crates.io-index)" = "7d0d616e04ece85dd4ac5f88c2df046ea7d386a0d1443c450e2265ba180262c0"
+"checksum lsb_text_png_steganography 0.1.1 (registry+https://github.com/rust-lang/crates.io-index)" = "379e8de047ea52b1295f0b951e31fbd05fb0dd5760969133d6896cdce6cb6eb8"
 "checksum lzw 0.10.0 (registry+https://github.com/rust-lang/crates.io-index)" = "7d947cbb889ed21c2a84be6ffbaebf5b4e0f4340638cba0444907e38b56be084"
 "checksum memchr 2.1.0 (registry+https://github.com/rust-lang/crates.io-index)" = "4b3629fe9fdbff6daa6c33b90f7c08355c1aca05a3d01fa8063b822fcf185f3b"
 "checksum memoffset 0.2.1 (registry+https://github.com/rust-lang/crates.io-index)" = "0f9dc261e2b62d7a622bf416ea3c5245cdd5d9a7fcc428c0d06804dfce1775b3"
