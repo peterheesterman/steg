@@ -3,6 +3,13 @@
 
 Command line steganography tool.
 
+## Notice
+
+I am trying an experiement - i am trying to restructure the way steg works.
+
+Currently i am re-implementing the 3 working strategies another way that should scale more nicely meaning that more strategies will be easier to add later on.
+
+Feel free to add strategies in the current way and i will still merge them. :rocket:
 
 ### Terms
   - `payload` - the secret message or content to be hidden
