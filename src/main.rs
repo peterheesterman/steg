@@ -6,13 +6,13 @@ use steg::{HideConfig, RevealConfig};
 
 fn main() {
     let matches = App::new("Steg")
-        .version("0.1.0")
+        .version("0.1.6")
         .author("Peter Heesterman <heesterman.peter@gmail.com>")
         .about("Command Line Steganography")
         .subcommand(
             SubCommand::with_name("hide")
                 .about("Hide things with steganography")
-                .version("0.1.0")
+                .version("0.1.6")
                 .author("Peter Heesterman <heesterman.peter@gmail.com>")
                 .arg(
                     Arg::with_name("payload")
@@ -49,7 +49,7 @@ fn main() {
         ).subcommand(
             SubCommand::with_name("reveal")
                 .about("Reveal things that have been hidden using steganography")
-                .version("0.1.0")
+                .version("0.1.6")
                 .author("Peter Heesterman <heesterman.peter@gmail.com>")
                 .arg(
                     Arg::with_name("carrier")
